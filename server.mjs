@@ -14,7 +14,9 @@ let PORT = 3000;
 
 
 // Routes
-
+app.use('/patients', patients);
+app.use('/patients/patient1', patient1);
+app.use('/doctors', doctors);
 
 
 // listen
