@@ -9,5 +9,16 @@ export const patient1 = [
         Diagnostic: "voluptas sunt",
         Prescription: "dolor sit amet consectetur",
         date: "10/13/2024"
-    }
+    },
+    {
+        "Patient ID": 1,
+        name: "Keanu Reeves",
+        DOB: "09/02/1964",
+        email: "Keanu@Reeves.com",
+        "family history": "Lorem ipsum dolor sit amet.",
+        "Doctor notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex culpa dolore nulla, quod possimus temporibus quis sunt consequatur sapiente veniam. Voluptates beatae culpa doloremque a consequuntur, praesentium voluptatibus excepturi, deleniti sapiente iure amet corrupti. Veritatis optio reiciendis asperiores quasi mollitia accusantium saepe doloribus, tempora earum expedita consequatur, atque deleniti illo hic illum recusandae dignissimos ex!",
+        Diagnostic: "vLorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, dignissimos.",
+        Prescription: "Lorem, ipsum dolor.",
+        date: "09/13/2024"
+    },
 ]
