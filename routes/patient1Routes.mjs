@@ -9,9 +9,15 @@ router.get('/', (req, res) => {
 
 
 router.post('/', (req, res) => {
+    const patientOne = patient1[0];
+
     if (req.body["Doctor notes"] && req.body.Diagnostic && req.body.Prescription && req.body.date) {
     const patient1Data = {
-        "Doctor notes": req.body.DoctorNotes,
+        name: patientOne.name,
+        DOB: patientOne.DOB,
+        email: patientOne.email,
+        "family history": patientOne["family history"],
+        "Doctor notes": req.body["Doctor notes"],
         Diagnostic: req.body.Diagnostic,
         Prescription: req.body.Prescription,
         date: req.body.date,
