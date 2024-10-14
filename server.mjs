@@ -16,8 +16,8 @@ app.use(express.json());
 
 
 // Routes
+app.use('/patient1', patient1Routes);
 app.use('/patients', patientsRoutes);
-app.use('/patients/patient1', patient1Routes);
 app.use('/doctors', doctorsRoutes);
 
 
