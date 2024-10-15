@@ -31,8 +31,16 @@ app.get("/patients", (req, res) => {
     res.render("patientList", { patients: patients }); //filename home.pug
 });
 
+app.get("/patients/update", (req, res) => {
+    res.render("patientList", { patients: patients }); //filename home.pug
+});
+
 app.get("/doctors", (req, res) => {
     res.render("doctorList", { doctors: doctors }); //filename home.pug
+});
+
+app.get("/patient1", (req, res) => {
+    res.render("patient1", { patient1: patient1 }); //filename home.pug
 });
 
 

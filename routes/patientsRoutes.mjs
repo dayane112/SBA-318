@@ -53,7 +53,7 @@ router.patch('/:id', (req, res, next) => {
     let email = req.body.email;
     // parseInt converts to url string to interger
     let id = parseInt(req.params.id);
-    
+
     let patient = patients.find(p => p.id === id);
 
     if(name != null) patient.name = name;
@@ -70,7 +70,8 @@ router.patch('/:id', (req, res, next) => {
     //     res.status(400).send('Missing fields');
     // }
 
-    res.status(201).send('Patient edited');
+    res.render('patientList', { patients: patients })
+    // res.status(201).send('Patient edited');
     // next();
 });
 

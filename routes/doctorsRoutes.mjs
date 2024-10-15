@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
 });
 
 
-router.post('/', (req, res) => {
+router.route('/').post((req, res) => {
     if (req.body.doctor && req.body.specialty && req.body.license) {
     const doctorData = {
         ID:  doctors.length + 1,
@@ -18,7 +18,8 @@ router.post('/', (req, res) => {
     };
 
     doctors.push(doctorData)
-    res.status(201).send('Doctor added');
+    res.render('doctorList', { doctors: doctors })
+    // res.status(201).send('Doctor added');
     
 }else {
     res.status(400).send('Missing fields');

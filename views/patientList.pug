@@ -26,3 +26,33 @@ html(lang='en')
                         | Email: #{patient.email}
                         br
                         br
+                        form(action='/patients/update', method='post', id='updatePatient')
+                            input(type="hidden", name="_method", value="PATCH")
+                            br
+                            input(type="text", name='name', placeholder='Name')
+                            br
+                            input(type="text", name='DOB', placeholder='DOB')
+                            br
+                            input(type="text", name='email', placeholder='email')
+                            br
+                            input(type="submit", value='Update Patient')
+
+            form(action='/patients', method='post',  id='patientsPost')
+                br
+                input(type="text", name='name', placeholder='Name')
+                br
+                input(type="text", name='DOB', placeholder='Date Of Birth')
+                br
+                input(type="text", name='email', placeholder='email')
+                br
+                input(type="submit")
+
+            form(action='/patients', method='delete',  id='patientsDelete')
+                br
+                input(type="text", name='name', placeholder='Name')
+                br
+                input(type="text", name='DOB', placeholder='Date Of Birth')
+                br
+                input(type="text", name='email', placeholder='email')
+                br
+                input(type="submit", value='Delete')
