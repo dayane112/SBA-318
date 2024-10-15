@@ -1,5 +1,5 @@
 # About The Project
-### This is a doctor website for patient information and doctor information
+### This is a doctor website for patient's information and doctor's information for the doctor office only.
 
 ## Built With
 ### PUG
