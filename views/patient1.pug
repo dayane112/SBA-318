@@ -2,7 +2,7 @@ doctype html
 html(lang='en')
     head
         title Patient List
-        link(rel='stylesheet', href='./patients.css')
+        link(rel='stylesheet', href='./patient1.css')
     body
         h1 Doctor Office
         br
@@ -12,14 +12,13 @@ html(lang='en')
             a(href='/patients' class="nav") Patient list 
 
             a(href='/doctors' class="nav") Doctor list
-            
         br
         h3 Patient List
             ul
                 each patient in patients
                         | id: #{patient.id}
                         br
-                        a(href='/patient1') Name: #{patient.name}
+                        | Name: #{patient.name}
                         br
                         | DOB: #{patient.DOB}
                         br

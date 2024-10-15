@@ -5,6 +5,7 @@ import doctorsRoutes from "./routes/doctorsRoutes.mjs";
 import patient1Routes from "./routes/patient1Routes.mjs";
 import { patients } from './data/patients.mjs';
 import { doctors } from './data/doctors.mjs';
+import { patient1 } from './data/patient1.mjs'
 
 import pug from "pug";
 
@@ -14,10 +15,11 @@ let PORT = 3000;
 
 // Servin static files
 app.use(express.static('./styles'));
-
+app.use(express.urlencoded({ extended: true }));
 
 // middleware
 app.use(express.json());
+
 
 
 app.set("view engine", "pug");

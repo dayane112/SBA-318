@@ -1,24 +1,35 @@
 doctype html
 html(lang='en')
- head
-   title Doctor List
- body
-    h1 Doctor Office
-    br
-    div
-      nav 
-        a(href='/') Home 
-        a(href='/patients') Patient list 
+    head
+        title Doctor List
+        link(rel='stylesheet', href='./doctors.css')
+        script(src='/js/doctorFormHandler.mjs', type='module')
+    body
+        h1 Doctor Office
+        br
+        div
+        nav 
+            a(href='/' class="nav") Home 
+            a(href='/patients' class="nav") Patient list 
 
-        a(href='/doctors') Doctor list
-    br
-    h3 Doctor List
-        ul
-            each doctor in doctors
-                | doctor: #{doctor.doctor}
-                br
-                | specialty: #{doctor.DspecialtyB}
-                br
-                | license: #{doctor.license}
-                br
-                br
+            a(href='/doctors' class="nav") Doctor list
+        br
+        h3 Doctor List
+            ul
+                each doctor in doctors
+                    | Doctor: #{doctor.doctor}
+                    br
+                    | Specialty: #{doctor.specialty}
+                    br
+                    | License: #{doctor.license}
+                    br
+                    br
+        form(action='/doctors', method='post',  id='doctorForm')
+            br
+            input(type="text", name='doctor', placeholder='Doctor name')
+            br
+            input(type="text", name='specialty', placeholder='Specialty')
+            br
+            input(type="text", name='license', placeholder='License number')
+            br
+            input(type="submit")
