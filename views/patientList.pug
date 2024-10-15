@@ -1,0 +1,26 @@
+doctype html
+html(lang='en')
+ head
+   title Patient List
+ body
+    h1 Doctor Office
+    br
+    div
+      nav 
+        a(href='/') Home 
+        a(href='/patients') Patient list 
+
+        a(href='/doctors') Doctor list
+    br
+    h3 Patient List
+        ul
+            each patient in patients
+                    | id: #{patient.id}
+                    br
+                    | Name: #{patient.name}
+                    br
+                    | DOB: #{patient.DOB}
+                    br
+                    | Email: #{patient.email}
+                    br
+                    br

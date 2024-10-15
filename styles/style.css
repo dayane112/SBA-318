@@ -1,0 +1,31 @@
+body{
+    background-color: #b2c6e4;
+}
+a{
+    
+    width: 100%;
+    align-items: center;
+    text-decoration: none;
+    color: #ae4b1e;
+    font-size: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-evenly; */
+}
+
+div{
+    background-color: #728faf;
+    width: 100%;
+    text-align: center;
+
+}
+
+h1{
+    text-align: center;
+}
+
+p{
+    margin: 0px 50px 0px 50px;
+    font-size: 20px;
+    font-weight: 100;
+}

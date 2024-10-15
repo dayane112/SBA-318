@@ -1,0 +1,24 @@
+doctype html
+html(lang='en')
+ head
+   title Doctor List
+ body
+    h1 Doctor Office
+    br
+    div
+      nav 
+        a(href='/') Home 
+        a(href='/patients') Patient list 
+
+        a(href='/doctors') Doctor list
+    br
+    h3 Doctor List
+        ul
+            each doctor in doctors
+                | doctor: #{doctor.doctor}
+                br
+                | specialty: #{doctor.DspecialtyB}
+                br
+                | license: #{doctor.license}
+                br
+                br
