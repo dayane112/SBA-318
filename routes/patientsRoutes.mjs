@@ -51,7 +51,9 @@ router.patch('/:id', (req, res, next) => {
     let name = req.body.name;
     let DOB = req.body.DOB;
     let email = req.body.email;
+    // parseInt converts to url string to interger
     let id = parseInt(req.params.id);
+    
     let patient = patients.find(p => p.id === id);
 
     if(name != null) patient.name = name;
@@ -73,7 +75,34 @@ router.patch('/:id', (req, res, next) => {
 });
 
 
+// router.delete('/:id', (req, res, next) => {
+//     const patient = patients.find((p, i) => {
+//       if (p.id == req.params.id) {
+//         patients.splice(i, 1);
+//         return true;
+//       }
+//     });
+  
+//     if (patient) res.json(patient);
+//     else next();
+//   });
 
 
+router.delete('/:id', (req, res, next) => {
+    let patient = null;
+    for(let i = 0; i < patients.length; i++){
+        // checking the id ID matches the ID of of URL
+        // parseInt converts to url string to interger
+      if (patients[i].id == parseInt(req.params.id)) {
+        patient = patients[i];
+        patients.splice(i, 1);
+
+      }
+    }
+  
+    if (patient) res.json(patient);
+    else next();
+    
+});
 
 export default router;
